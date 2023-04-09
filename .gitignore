@@ -1,3 +1,6 @@
+#dagit temp files
+tmp*/
+
 postgres-dagster
 
 # Byte-compiled / optimized / DLL files
