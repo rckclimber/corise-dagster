@@ -63,8 +63,8 @@ def put_redis_data(context, aggregation):
     ins={"aggregation":In(dagster_type=Aggregation)},
     required_resource_keys={"s3"},
 )
-def put_s3_data(context, aggregation) -> Nothing:
-    return context.resources.s3.put_data(key_name=name=aggregation.date.strftime("%Y%m%d"),data=aggregation)
+def put_s3_data(context, aggregation):
+    return context.resources.s3.put_data(key_name=aggregation.date.strftime("%Y%m%d"),data=aggregation)
 
 @graph
 def machine_learning_graph():
